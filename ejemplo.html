@@ -33,11 +33,47 @@
 	background-color: #ffeaa7;
 	}
 	.inferior {
+	display: flex;	
 	height: 50vh;
-	background-color: #e0ffd0;
+	}
+	.inferior section{
+	flex: 1;
 	padding: 20px;
 	box-sizing: border-box;
+	border: 1px solid #ccc;
+	}
+	.info{
+	background-color: #1c2a3a;
+	}
+	.inf{
+	background-color: #b3c3d2;
+	}
+	.in{
+	background-color: #d2baa4;
+	}
+	.innn{
+	background-color: #ead3b8;
+	}
+	.filainfo{
+	display: flex;
+	height: 45vh;
+	background-color: #e0ffd0;
+	padding: 10px;
+	box-sizing: border-box;
 	border-top: 1px solid #ccc;
+	}
+	.info, .inf, .in, .innn {
+	flex: 1;
+	padding: 10px;
+	box-sizing: border-box;
+	}
+	.right{
+	background-color: #a8c1d1;
+	height: 37.5vh;		
+	}
+	.left{
+	background-color: #f0c896;		
+	height: 37.5vh;
 	}
 </style>
 </head>
@@ -45,8 +81,21 @@
 <div style="text-align: left;">
 <header><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuT0r7SYWn8qe0zAAdujdlN7JEfieOANIA7A&s" alt=" 4to baco " width="50px" height="50px"> P A G I N A </img></header>
 </div>
-<div style="background-color: #b8c1cc;">
-<p> ----- M E N U -----                                             |           -----  P O P U L A R E S -----            | ----- S O B R E  -- N O S O T R O S -----</p>
+<div style="background-color: #b8c1cc; border-radius: 8px; padding: 10px;">
+<p onclick="mostrarMensaje()" style="cursor:pointer; color:blue;">
+     ----- M E N U -----                                             |           -----  P O P U L A R E S -----            | ----- S O B R E  -- N O S O T R O S -----
+</p>
+</div>
+<div id="mensaje" style="border-radius: 8px; background-color:#f0c896; display: none; padding: 10px;">
+---T R A B A J O S
+---A U T O R E S
+---L I T E R A T U R A
+---N O S O T R O S
+<script>
+	function mostrarMensaje(){
+document.getElementById("mensaje").style.display = "block";
+	}
+</script>
 </div>
 <h1 style="color: black;"> 4to Bachillerato en </h1>
 <h2 style="color: black;"> C O M P U T A C I O N </h2>
@@ -61,25 +110,58 @@
 	<img src="https://peru.unir.net/wp-content/uploads/sites/2/2024/12/Ciencias-de-la-computacion-Que-son-y-para-que-sirven.jpg" alt=" 4to baco " width="500px" height="270px">
 	</section>
 </div>	
-	<section class="inferior">
-	<p></p>
-	<div style="text-align: left;">
-<nav>
-<ul> 
+<div class="filainfo">
+	<section class="info">
+<p>A U T O R E S</p>
+<p> En esta seccion se mencionaran diversos autores donde se habran investigado diversos datos de ellos como:</p>
+<p> Nacimiento, Muerte, Literatura a la que se dedico, Principales obras, Caracteristicas de el autor, entre otros</p>
+<p> Esto es podra encontrar en la pestaña: Populares y menu</p>
+	</section>
+	<section class="inf">
+<p>L I T E R A T U R A S</p>
+<p> En esta seccion se haran investigaciones sobre las diversas Literaturas Existentes, mencionando datos como:</p>
+<p> Principales autores, datos importantes, fecha en la que fue su mejor epoca, etc</p>
+<p> Esto es podra encontrar en la pestaña: Populares y menu</p>
+	</section>
+	<section class="in">
+<p>T R A B A J O S</p>
+<p> En esta seccion se subiran trabajos pedidos por la profesora, tales como: </p>
+<p> Tareas en clase, Historias hechas, Mejores trabajos calificados, entre otros</p>
+<p> Esto es podra encontrar en la pestaña: Populares y menu.</p>
+
+	</section>
+	<section class="innn">
+<p>N O S O T R O S</p>
+<p> En esta seccion se encontraran datos sobre los integrantes de nuestra clase, tales como:</p>
+<p> Nombre de los estudiantes, correo electronico estudiantil, trabajos subidos, aportaciones, entre otros</p>
+<p> Esto es podra encontrar en la pestaña: Sobre nosotros </p>
+	</section>
+</div>
+	<div class="inferior">
+	<section class="left">
+<p> I N D I C E </p>
+<nav> 
 	<li> <a href="#hola"> Introduccion </a></li>
 	<li> <a href="#contenido1"> Contenido 1.</li>
 	<li> <a href="#contenido2"> Contenido 2.</li>
 	<li> <a href="#contenido3"> Contenido 3.</li>
-	<li> <a href="#contenido4"> Contenido 4. </li></ul>
+	<li> <a href="#contenido4"> Contenido 4. </li>
 <nav>
+</section>
+	<div style="text-align: center;">
+	<section class="right">
+	<img src="https://campus.stedwards.com.ar/pluginfile.php/1462/course/overviewfiles/literatura.jpg" alt=" 4to baco " width="800px" height="200px">
 </div>
 </section>
+</div>
 <dl>
 <dt> Alumna Jessica Muñoz</dt>
 <dd> Encagada de liderar el proyecto de la Tarea no.4. de la materia Comunicacion y Lenguaje, propietaria de esta pagina </dd>
 <dt> Alumno Edreas</dt>
 <dd> Encargado de la base de la pagina web</dd>
 </dl>
-<footer></footer>
+<br>-</br>
+<footer><img src="https://liceocanadiense.edu.gt/wp-content/uploads/2024/07/nuevo_logo_lc-1.png" alt=" 4to baco " width="400px" height="100px">
+</footer>
 </body>
 </html>

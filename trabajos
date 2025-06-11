@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title> Tarea no.4. Comunicacion y Lenguaje</title>
+<style>
+	body{ 	
+	margin: 0;
+	font-family: Bodoni;	
+	text-align: center;
+	background: linear-gradient(to bottom,
+	#d2f0e9,
+	#f1faf8);
+	}
+	header{
+	background-color: #ffeaa7;
+	}
+</style>
+</head>
+<body>	
+<div style="text-align: left;">
+<header><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuT0r7SYWn8qe0zAAdujdlN7JEfieOANIA7A&s" alt=" 4to baco " width="50px" height="50px"> P A G I N A </img></header>
+</div>
+<div style="background-color: #b8c1cc; border-radius: 8px; padding: 10px;">
+<p onclick="mostrarMensaje()" style="cursor:pointer; color:blue;">
+     ----- M E N U -----                                             |           -----  P O P U L A R E S -----            | ----- S O B R E  -- N O S O T R O S -----
+</p>
+</div>
+<div id="mensaje" style="border-radius: 8px; background-color:#f0c896; display: none; padding: 10px;">
+<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
+---T R A B A J O S
+</p>
+<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
+---A U T O R E S
+</p>
+<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
+---L I T E R A T U R A
+</p>
+<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
+---N O S O T R O S
+</p>
+<script>
+	function mostrarMensaje(){
+document.getElementById("mensaje").style.display = "block";
+	}
+</script>
+</div>
+<h2 style="color: black;"> T R A B A J O S </h2>
+<dt> Alumna Jessica Muñoz</dt>
+<dd> Encagada de liderar el proyecto de la Tarea no.4. de la materia Comunicacion y Lenguaje, propietaria de esta pagina </dd>
+<dt> Alumno Edreas</dt>
+<dd> Encargado de la base de la pagina web</dd>
+</dl>
+<br>-</br>
+<footer><img src="https://liceocanadiense.edu.gt/wp-content/uploads/2024/07/nuevo_logo_lc-1.png" alt=" 4to baco " width="400px" height="100px">
+</footer>
+</body>
+</html>

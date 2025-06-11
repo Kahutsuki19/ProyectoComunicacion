@@ -7,39 +7,52 @@
 <style>
 	body{ 	
 	margin: 0;
-	font-family: Bodoni;	
+	font-family: Yu Gothic Light;
 	text-align: center;
-	background: linear-gradient(to bottom,
-	#d2f0e9,
-	#f1faf8);
+	background: linear-gradient(to bottom right, #f1faf8, White);
 	}
 	header{
+	background-color: #ffeaa7;
+	}
+	.fila-superior {
+	display: flex;	
+	height: 115vh;
+	}
+	.fila-superior section {
+	flex: 1;
+	padding: 30px;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	}
+	.izquierda {
+	background-color: #ffeaa7;
+	}
+	.derecha {
 	background-color: #ffeaa7;
 	}
 </style>
 </head>
 <body>	
-<div style="text-align: left;">
-<header><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuT0r7SYWn8qe0zAAdujdlN7JEfieOANIA7A&s" alt=" 4to baco " width="50px" height="50px"> P A G I N A </img></header>
-</div>
+<header>  <a href="https://liceocanadiense.mayavirtual.net/my/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuT0r7SYWn8qe0zAAdujdlN7JEfieOANIA7A&s" alt=" 4to baco " width="50px" height="50px"></img></a></header>
 <div style="background-color: #b8c1cc; border-radius: 8px; padding: 10px;">
 <p onclick="mostrarMensaje()" style="cursor:pointer; color:blue;">
      ----- M E N U -----                                             |           -----  P O P U L A R E S -----            | ----- S O B R E  -- N O S O T R O S -----
 </p>
 </div>
 <div id="mensaje" style="border-radius: 8px; background-color:#f0c896; display: none; padding: 10px;">
-<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
----T R A B A J O S
-</p>
-<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
----A U T O R E S
-</p>
-<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
----L I T E R A T U R A
-</p>
-<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
----N O S O T R O S
-</p>
+  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/trabajos" style="color:blue; text-decoration:underline; display:block;">
+    ---T R A B A J O S
+  </a>
+  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/autores" style="color:blue; text-decoration:underline; display:block;">
+    ---A U T O R E S
+  </a>
+  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/literatura" style="color:blue; text-decoration:underline; display:block;">
+    ---L I T E R A T U R A
+  </a>
+  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/nosotros" style="color:blue; text-decoration:underline; display:block;">
+    ---N O S O T R O S
+  </a>
+</div>
 <script>
 	function mostrarMensaje(){
 document.getElementById("mensaje").style.display = "block";
@@ -47,6 +60,146 @@ document.getElementById("mensaje").style.display = "block";
 </script>
 </div>
 <h2 style="color: black;"> N O S O T R O S </h2>
+<p> E S T U D I A N T E S </p>
+<p> Numero de estudiantes: 23 </p>
+<div class="fila-superior">
+<section class="izquierda">
+<p id="aportaciones"> Aportaciones </p>
+<p style="color: red;"> da click en el nombre para dirigirte a sus aoprtaciones automaticamente </a></p>
+<ul>
+	<li><a href="#Abdiasc">Abdiasc</a></li>
+	<li><a href="#Angel">Angel</a></li>
+	<li><a href="#Arleth">Arleth</a></li>
+	<li><a href="#Bismarck">Bismarck</a></li>
+	<li><a href="#Brayan">Brayan</a></li>
+	<li><a href="#Cesar">Cesar</a></li>
+	<li><a href="#Chair">Chair</a></li>
+	<li><a href="#Christopher">Christopher</a></li>
+	<li><a href="#Edreas">Edreas</a></li>
+	<li><a href="#Erick">Erick</a></li>
+	<li><a href="#Gabriela">Gabriela</a></li>
+	<li><a href="#Garcia">Garcia</a></li>
+	<li><a href="#Hector">Hector</a></li>
+	<li><a href="#Jasmin">Jasmin</a></li>
+	<li><a href="#Jeremias">Jeremias</a></li>
+	<li><a href="#Jessica">Jessica</a></li>
+	<li><a href="#Joel">Joel</a></li>
+	<li><a href="#Manuel">Manuel</a></li>
+	<li><a href="#Marcos">Marcos</a></li>
+	<li><a href="#Racso">Racso</a></li>
+	<li><a href="#Roberto">Roberto</a></li>
+	<li><a href="#Sanchez">Sanchez</a></li>
+</ul>
+</section>
+<section class="derecha">
+Productos
+</section>
+</div>
+<div class="fila-superior">
+<section>
+<p id="Abdiasc">--- A B D I A S C --- </p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Angel">--- A N G E L ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Arleth">--- A R L E T H ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Bismarck">--- B I S M A R C K ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Brayan">--- B R A Y A N ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+</div>
+<div class="fila-superior">
+<section>
+<p id="Cesar">--- C E S A R ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Chair">--- C H A I R ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Christopher">--- C H R I S T O P H E R ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Edreas">--- E D R E A S ---</p>
+<p> Creacion de la base de la pagina web </p>
+<p> Aportaciones totales: 1 </p>
+</section>
+<section>
+<p id="Erick">--- E R I C K ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+</div>
+<div class="fila-superior">
+<section>
+<p id="Gabriela">--- G A B R I E L A ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Garcia">--- G A R C I A ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Hector">--- H E C T O R ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Jasmin">--- J A S M I N ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Jeremias">--- J E R E M I A S ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+</div>
+<div class="fila-superior">
+<section>
+<p id="Jessica">--- J E S S I C A -- M U Ñ O Z ---</p>
+<p>--- encargada del Proyecto/ lider ---</p>
+<p> Programacion de la pagina web y el diseño de esta. </p>
+<p> Investigacion del autor Jorge Luis Borges </p>
+<p> Aportaciones totales: 2 </p>
+</section>
+<section>
+<p id="Joel">--- J O E L ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Manuel">--- M A N U E L ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Marcos">--- M A R C O S ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Racso">--- R A C S O ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+</div>
+<div class="fila-superior">
+<section>
+<p id="Roberto">--- R O B E R T O ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+<section>
+<p id="Sanchez">--- S A N C H E Z ---</p>
+<p> Aportaciones totales: 0 </p>
+</section>
+</div>
+<div style="color: red;">
+<p> <a href="#aportaciones"> Haz click aqui para volver a la lista de estudiantes </a></p>
+</div>
 <dt> Alumna Jessica Muñoz</dt>
 <dd> Encagada de liderar el proyecto de la Tarea no.4. de la materia Comunicacion y Lenguaje, propietaria de esta pagina </dd>
 <dt> Alumno Edreas</dt>
@@ -57,4 +210,3 @@ document.getElementById("mensaje").style.display = "block";
 </footer>
 </body>
 </html>
-

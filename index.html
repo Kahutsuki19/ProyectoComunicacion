@@ -7,24 +7,30 @@
 <style>
 	body{ 	
 	margin: 0;
-	font-family: Bodoni;	
+	font-family: Yu Gothic Light;	
 	text-align: center;
-	background: linear-gradient(to bottom,
-	#d2f0e9,
-	#f1faf8);
+	background: linear-gradient(to bottom right, #f1faf8, White);
 	}
 	header{
 	background-color: #ffeaa7;
 	}
 	.fila-superior {
 	display: flex;	
-	height: 50vh;
+	height: 52.5vh;
 	}
 	.fila-superior section {
 	flex: 1;
 	padding: 20px;
 	box-sizing: border-box;
 	border: 1px solid #ccc;
+	}
+	.fla-superior {
+	display: flex;	
+	height: 85vh;
+	}
+	.fla-superior section {
+	flex: 1;
+	padding: 20px;
 	}
 	.izquierda {
 	background-color: #ffeaa7;
@@ -56,8 +62,8 @@
 	}
 	.filainfo{
 	display: flex;
-	height: 45vh;
-	background-color: #e0ffd0;
+	height: 50vh;
+	background-color: white;
 	padding: 10px;
 	box-sizing: border-box;
 	border-top: 1px solid #ccc;
@@ -69,36 +75,45 @@
 	}
 	.right{
 	background-color: #a8c1d1;
-	height: 37.5vh;		
+	height: 48.5vh;		
 	}
 	.left{
 	background-color: #f0c896;		
-	height: 37.5vh;
+	height: 48.5vh;
+	}
+	main{
+	background-color: #b3c3d2;
+	border-top: 1px solid #ccc;
+	}
+	.color3{
+	background-color:#d2f0e9;
+	}
+	.color4{
+	background-color:#f1faf8;
 	}
 </style>
 </head>
 <body>	
-<div style="text-align: left;">
-<header><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuT0r7SYWn8qe0zAAdujdlN7JEfieOANIA7A&s" alt=" 4to baco " width="50px" height="50px"> P A G I N A </img></header>
-</div>
+<header>  <a href="https://liceocanadiense.mayavirtual.net/my/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuT0r7SYWn8qe0zAAdujdlN7JEfieOANIA7A&s" alt=" 4to baco " width="50px" height="50px"></img></a></header>
 <div style="background-color: #b8c1cc; border-radius: 8px; padding: 10px;">
 <p onclick="mostrarMensaje()" style="cursor:pointer; color:blue;">
      ----- M E N U -----                                             |           -----  P O P U L A R E S -----            | ----- S O B R E  -- N O S O T R O S -----
 </p>
 </div>
 <div id="mensaje" style="border-radius: 8px; background-color:#f0c896; display: none; padding: 10px;">
-<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
----T R A B A J O S
-</p>
-<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
----A U T O R E S
-</p>
-<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
----L I T E R A T U R A
-</p>
-<p onclick="window.location.href='https://www.ejemplo.com'" style="cursor:pointer; color:blue; text-decoration:underline;">
----N O S O T R O S
-</p>
+  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/trabajos" style="color:blue; text-decoration:underline; display:block;">
+    ---T R A B A J O S
+  </a>
+  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/autores" style="color:blue; text-decoration:underline; display:block;">
+    ---A U T O R E S
+  </a>
+  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/literatura" style="color:blue; text-decoration:underline; display:block;">
+    ---L I T E R A T U R A
+  </a>
+  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/nosotros" style="color:blue; text-decoration:underline; display:block;">
+    ---N O S O T R O S
+  </a>
+</div>
 <script>
 	function mostrarMensaje(){
 document.getElementById("mensaje").style.display = "block";
@@ -150,18 +165,22 @@ document.getElementById("mensaje").style.display = "block";
 <p> I N D I C E </p>
 <nav> 
 	<li> <a href="#hola"> Introduccion </a></li>
-	<li> <a href="#contenido1"> Contenido 1.</li>
-	<li> <a href="#contenido2"> Contenido 2.</li>
-	<li> <a href="#contenido3"> Contenido 3.</li>
-	<li> <a href="#contenido4"> Contenido 4. </li>
+	<li> <a href="#semana1"> Semana 1.</a></li>
+	<li> <a href="#semana2"> Semana 2.</a></li>
+	<li> <a href="#semana3"> Semana 3.</a></li>
+	<li> <a href="#semana4"> Semana 4.</a></li>
+	<li> <a href="#semana5"> Semana 5.</a></li>
+	<li> <a href="#semana6"> Semana 6.</a></li>
+	<li> <a href="#semana7"> Semana 7.</a></li>
+	<li> <a href="#semana8"> Semana 8.</a></li>
 <nav>
 </section>
 	<div style="text-align: center;">
 	<section class="right">
 	<img src="https://campus.stedwards.com.ar/pluginfile.php/1462/course/overviewfiles/literatura.jpg" alt=" 4to baco " width="800px" height="200px">
 </div>
-</section>
 </div>
+</section>
 <dl>
 <dt> Alumna Jessica Muñoz</dt>
 <dd> Encagada de liderar el proyecto de la Tarea no.4. de la materia Comunicacion y Lenguaje, propietaria de esta pagina </dd>
@@ -173,5 +192,3 @@ document.getElementById("mensaje").style.display = "block";
 </footer>
 </body>
 </html>
-
-	

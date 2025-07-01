@@ -4,41 +4,99 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title> Tarea no.4. Comunicacion y Lenguaje</title>
-	<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 <style>
+    	.imagen-fondo {
+    	padding: 0;
+    	background-image: url('');   
+	background-size: cover;
+    	background-attachment: scroll; 
+    	background-position: center;  
+    	background-repeat: no-repeat; 
+    	min-height: 100vh
+	width: 100%;
+	height: auto;
+	margin: 0;
+	z-index: 1;
+        }
 	body{ 	
+	overflow-x: hidden;
 	margin: 0;
 	text-align: center;
-	background: linear-gradient(to bottom right, black, black);
+	background: linear-gradient(to bottom, rgb(55, 76, 97), rgb(49, 75, 95), rgb(49, 75, 95), rgb(49, 75, 95), rgb(75, 81, 105));
 	font-family: ¨Source Serif 4¨, serif;
+    	flex-direction: column;
 	}
 	header{
-	background-color: black;
+	background-color: white;
 	}
-	.contenedor-imagen {
+	.encima{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	padding: 20px;
+	}
+    	header .container {
+    	max-width: 1200px;
+    	margin: auto;
+    	padding: 0 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	}
+    	header nav{
+    	display: flex;
+    	}
+    	header nav p{
+    	color: black;
+    	margin-left: 20px;
+    	transition: color 0.5s ease;
+    	cursor: pointer;
+    	font-family: 'Cinzel', serif;
+    	}
+    	header nav p:hover{
+    	color: #00000065;
+    	}
+	.zona-imagen{
+	background-color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	}
+	.contenedor-imagen{
 	position: relative;
-	display: inline-block;
+	width: 100%;
+	height: auto;
+	margin-bottom: 200px;
 	}
 	.mi-imagen {
 	display: block;
-	width: 100%;
+	width: 1500px;
 	height: auto;
 	}
 	.texto-encima {
 	position: absolute;
 	top: 0;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	padding: 1em;
+	padding: 10px;
 	box-sizing: border-box;	
-	color: white;
-	background: rgba(0, 0, 0, 0.5); /* fondo semitransparente opcional */
+	color: black;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: left;
+	justify-content: right;
+	text-align: center;
+    	align-items: flex-start;
+	z-index: 2;
 	}
 	.fila-superior {
 	display: flex;	
@@ -47,42 +105,57 @@
 	.fila-superior section {
 	flex: 1;
 	padding: 20px;
-	box-sizing: border-box;
-	border: 1px solid #000000;
-	color: white;
+	color: black;
 	}
 	.izquierda {
-	background-color: black;
+	color: black;
 	}
 	.derecha {
-	background-color: black;
+	color: black;
 	}
 	.info{
-	background-color: black;
+	background-color: #c3bde1;
 	}
 	.inf{
-	background-color: black;
+	background-color: #d4eeeb;
 	}
 	.in{
-	background-color: black;
+	background-color: #ffeaef;
 	}
 	.innn{
-	background-color: black;
+	background-color: #c2e8fb;
 	}
 	.filainfo{
 	display: flex;
-	height: 50vh;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10px;
 	padding: 10px;
+	margin-top: 0px;
+	width: 100%;
 	box-sizing: border-box;
-	border-top: 1px solid #000000;
-	background-color: black;
 	}
 	.info, .inf, .in, .innn {
-	flex: 1;
+    	flex: 1;
 	padding: 10px;
+	color: black;
 	box-sizing: border-box;
-	color: white;
+	height: 300px; 
+	text-align: center;
 	}
+	.filainfo-encima {
+	position: absolute;
+	top: 90%;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10px;
+	box-sizing: border-box;
+	z-index: 5;
+	}	
 	.inferior {
 	display: flex;	
 	height: 50vh;
@@ -90,143 +163,304 @@
 	.inferior section{
 	flex: 1;
 	padding: 20px;
-	box-sizing: border-box;
-	border: 1px solid #000000;
 	}
 	.right{
-	background-color: black;
 	height: 48.5vh;		
 	}
-	.left{
-	background-color: black;		
+	.left{		
 	height: 48.5vh;
-</style>
+	}
+	.intro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px;
+	margin-left: -700px;
+	margin-top: 200px;
+	padding: 20px;
+	}
+	.infoo{
+	text-align: center;
+	width: 500px;
+	height: 350px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgb(192, 220, 212);
+	}
+	.autores {
+	padding: 50px 20px;
+	text-align: center;
+	}
+	.tarjetas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	margin-top: 30px;
+	}
+	.tarjeta {
+	background-color: #fae6cb;
+	width: 280px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	}
+	.tarjeta:hover {
+	transform: scale(1.05);
+	}
+	.tarjeta img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 10px;
+	position: relative;
+	z-index: 1;
+	}
+	footer{
+	background-color: white;
+	}
+    	footer .container {
+    	max-width: 1200px;
+    	margin: auto;
+    	padding: 0 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	}
+	footer nav{
+    	display: flex;
+    	}
+    	footer nav p {
+    	color: black;
+    	margin-left: 20px;
+    	transition: color 0.5s ease;
+    	cursor: pointer;
+    	font-family: 'Coiny';
+    	}
+	p{
+  	color: black;
+	font-family: 'Outfit';
+	}
+	h2, h3{
+	color: #dcbb46;
+	}
+	.elcorte{
+  	position: absolute;
+  	bottom: -50px;
+  	left: 0;
+  	width: 1875px;
+  	height: 100px;
+  	z-index: 1;
+  	pointer-events: none;
+	left: -100%;
+	transform: scaleY(-1);
+	}
+	.seccion-corte {
+	position: relative;
+	display: inline-block;
+	}
+	.ayuda{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -700px;
+	margin-top: -200px;
+	gap: 10px;
+	}
+	button{
+	background-color: #faffc7;
+	height: 50px;
+	width: 120px;
+	font-family: 'Coiny';
+	font-size: 20px;
+	top: 60%;
+	color: black;
+	margin-left: -500px;
+	}
+</style>	
 </head>
-<body>	
-<header style="font-family: 'Cinzel', serif;">  <a href="https://liceocanadiense.mayavirtual.net/my/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuT0r7SYWn8qe0zAAdujdlN7JEfieOANIA7A&s" alt=" 4to baco " width="50px" height="50px"></img></a></header>
-<div style="background-color: black; border-radius: 8px; padding: 10px;">
-<p onclick="mostrarMensaje()" style="cursor:pointer; color:white;">
-     ----- M E N U -----                                             |           -----  P O P U L A R E S -----            | ----- S O B R E  -- N O S O T R O S -----
-</p>
+<body>
+<div class="imagen-fondo">
+<div class="contenedor-imagen">
+<img src="
+https://i.pinimg.com/originals/7c/51/1e/7c511e381c757d432f8c8e94982bfc02.gif
+" alt="IMAGENENNENENEN" class="mi-imagen" >
+<header class="encima" style="font-family: 'Coiny'; background-color: transparent;">
+<div class="container">    
+<a href="https://liceocanadiense.mayavirtual.net/my/"><img src="https://liceocanadiense.mayavirtual.net/pluginfile.php/1/theme_space/favicon/1747946624/nuevo_ico_lc.ico" alt=" 4to baco " width="70px" height="50px"></img></a>
+<div style="border-radius: 8px; padding: 10px; ">
+<nav>
+	<p id="Menu" onclick="mostrarMensaje(event, 'menu')" style="cursor:pointer; font-family: 'Coiny';">
+	-------- M E N U --------  
+	</p>                
+	<p id="Populares" onclick="mostrarMensaje(event, 'populares')" style="cursor:pointer; font-family: 'Coiny';">
+	-----  P O P U L A R E S ------   
+	</p>
+	<p id="Sobre nosotros" onclick="mostrarMensaje(event, 'nosotros')" style="cursor:pointer; font-family: 'Coiny';">
+	--- S O B R E  -- N O S O T R O S ---
+	</p>
+
+</nav>
 </div>
-<div id="mensaje" style="border-radius: 8px; background-color:#000000; display: none; padding: 10px;">
-  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/trabajos" style="color: white; text-decoration:underline; display:block; font-family: 'Cinzel', serif;">
-    ---T R A B A J O S
-  </a>
-  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/autores" style="color: white; text-decoration:underline; display:block; font-family: 'Cinzel', serif;">
-    ---A U T O R E S
-  </a>
-  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/literatura" style="color: white; text-decoration:underline; display:block; font-family: 'Cinzel', serif;">
-    ---L I T E R A T U R A
-  </a>
-  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/nosotros" style="color: white; text-decoration:underline; display:block; font-family: 'Cinzel', serif;">
-    ---N O S O T R O S
-  </a>
-  <a href="https://kahutsuki19.github.io/ProyectoComunicacion/iniciooscuro" style="color: white; text-decoration:underline; display:block; font-family: 'Cinzel', serif;">
-    ---M E N U
-  </a>
+</div>
+</header>
+<div id="menuFlotante" style="display: none; position: absolute; z-index: 999; background-color: rgba(255, 239, 204, 0.3); border-radius: 8px; padding: 15px; font-family: 'Cinzel', serif; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+    <div id="menu">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/inicio" style="color: black; font-family: 'Coiny'; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+M E N U
+</a>
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/codigo" style="color: black; font-family: 'Coiny'; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+C O D I G O
+</a>
+</div>
+<div id="populares" style="border-radius: 8px; display: none; padding: 10px; background-color: transparent;">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/trabajos" style="color: black; font-family: 'Coiny'; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+T R A B A J O S
+</a>
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/autores" style="color: black; font-family: 'Coiny'; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+A U T O R E S
+</a>
+<a href="https://kahutsuki19.git hub.io/ProyectoComunicacion/literatura" style="color: black; font-family: 'Coiny'; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+L I T E R A T U R A
+</a>
+</div>
+<div id="nosotros" style="border-radius: 8px; display: none; padding: 10px; background-color: rgba(255, 239, 204, 0.3);">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/nosotros" style="color: black; font-family: 'Coiny'; text-decoration:underline; display:block;">
+N O S O T R O S 
+</a>
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/pagina" style="color: black; font-family: 'Coiny'; text-decoration:underline; display:block;">
+P A G I N A
+</a>
+</div>
 </div>
 <script>
-	function mostrarMensaje(){
-document.getElementById("mensaje").style.display = "block";
-	}
+    function mostrarMensaje(event, seccion) {
+      const flotante = document.getElementById("menuFlotante");
+
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("populares").style.display = "none";
+      document.getElementById("nosotros").style.display = "none";
+
+      document.getElementById(seccion).style.display = "block";
+
+      const rect = event.target.getBoundingClientRect();
+      flotante.style.top = (rect.bottom + window.scrollY + 5) + "px";
+      flotante.style.left = (rect.left + window.scrollX) + "px";
+
+      flotante.style.display = "block";
+    }
 </script>
-</div>
-<div class="contenedor-imagen">
-<img src="https://enfoquenoticias.com.mx/wp-content/uploads/2025/04/galaxia.jpg" alt="Galaxiaaa" class="mi-imagen">
 <div class="texto-encima">
 <section>
-	<p style="font-family: 'Cinzel', serif;"> Crea tu propio universo </p>
-	<h2 id="hola"><div style="font-family: 'Cinzel', serif;"> Introduccion </div></h2>
-	<p> Bienvenid@ a la pagina de 4to Bachillerato en computacion </p> 
-	<p> Esta pagina no solo reflejara las lecturas y contenidos de este tercer Bimestre en el area de Comunicacion y Lenguaje;</p> 
-	<p>si no que tambien reflejara lo aprendido sobre; autores, tareas, ejercicios en clase, y demas investigaciones</p>
-	<p> Computacion no es solo una area tecnica en computadoras, si no tambien donde tenemos que aprender:</p>
-	<p> analisis, comprension lectora, logica, secuencias de tiempo y demas</p>
+<div class="intro">
+	<section class="infoo">
+	<h2 id="hola" style="font-size: 25px; color: black; font-family: 'Outfit';"> BIENVENIDOS AL NUCLEO DE LA LITERATURA </h2>
+	<p> Leer no es solo pasar páginas, es descubrir nuevos mundos, conocer personajes inolvidables y desarrollar la imaginación como si fuera un músculo. En esta página, encontrarás cuentos, fábulas, relatos breves y desafíos que te invitarán a pensar, reír y soñar. </p> 
+	<p> Aquí no solo se trata de leer por leer, sino de entender, imaginar, reflexionar… y también crear. Cada texto que leas puede inspirarte a escribir tus propias historias o a ver el mundo desde otro punto de vista. </p> 
+	<p style="font-size: 25px;"> Moldea y crea tus propias historias. </p>	
+	</section>
 </section>
 </div>
-</div>
-<div class="filainfo">
-<section class="info">
-<img src="https://mascultura.mx/wp-content/uploads/2023/04/Material-de-lectura-1-Alai%CC%81de-Foppa.png" height="400" weight="200">
-</section>
-<section class="inf">
-<img src="https://mascultura.mx/wp-content/uploads/2023/04/Material-de-lectura-3-Wine%CC%81tt-de-Rokha.png" height="400" weight="200">
-</section>
-<section class="in">
-<img src="https://mascultura.mx/wp-content/uploads/2023/04/Material-de-lectura-4-Mari%CC%81a-Emilia-Cornejo.png" height="400" weight="200">
 <section>
-</div>
-<br>-</br>
-<br>-</br>
-<div class="filainfo">
+	<div class="filainfo filainfo-encima">
 	<section class="info">
-<p style="font-family: 'Cinzel', serif;">A U T O R E S</p>
+<p style="font-family: 'Cinzel', serif; color: black; font-family: 'Coiny';">A U T O R E S</p>
 <p> En esta seccion se mencionaran diversos autores donde se habran investigado diversos datos de ellos como:</p>
 <p> Nacimiento, Muerte, Literatura a la que se dedico, Principales obras, Caracteristicas de el autor, entre otros</p>
-<p> Esto es podra encontrar en la pestaña: Populares y menu</p>
+<p> Esto es podra encontrar en la pestaña: </p>
+<p> <a href="#Populares"> Populares </a> </p> 
 	</section>
 	<section class="inf">
-<p style="font-family: 'Cinzel', serif;">L I T E R A T U R A S</p>
+<p style="font-family: 'Cinzel', serif; color: black; font-family: 'Coiny';">L I T E R A T U R A S</p>
 <p> En esta seccion se haran investigaciones sobre las diversas Literaturas Existentes, mencionando datos como:</p>
 <p> Principales autores, datos importantes, fecha en la que fue su mejor epoca, etc</p>
-<p> Esto es podra encontrar en la pestaña: Populares y menu</p>
+<p> Esto es podra encontrar en la pestaña: </p>
+<p> <a href="#Populares"> Populares </a> </p> 
 	</section>
 	<section class="in">
-<p style="font-family: 'Cinzel', serif;">T R A B A J O S</p>
+<p style="font-family: 'Cinzel', serif; color: black; font-family: 'Coiny';">T R A B A J O S</p>
 <p> En esta seccion se subiran trabajos pedidos por la profesora, tales como: </p>
 <p> Tareas en clase, Historias hechas, Mejores trabajos calificados, entre otros</p>
-<p> Esto es podra encontrar en la pestaña: Populares y menu.</p>
-
+<p> Esto es podra encontrar en la pestaña: </p>
+<p> <a href="#Populares"> Populares </a> </p> 
 	</section>
 	<section class="innn">
-<p style="font-family: 'Cinzel', serif;">N O S O T R O S</p>
+<p style="font-family: 'Cinzel', serif; color: black; font-family: 'Coiny';">N O S O T R O S</p>
 <p> En esta seccion se encontraran datos sobre los integrantes de nuestra clase, tales como:</p>
 <p> Nombre de los estudiantes, correo electronico estudiantil, trabajos subidos, aportaciones, entre otros</p>
-<p> Esto es podra encontrar en la pestaña: Sobre nosotros </p>
+<p> Esto es podra encontrar en la pestaña:</p>
+<p> <a href="#Sobre nosotros"> Sobre nosotros </a> </p> 
 	</section>
+    </div>
 </div>
-<div class="fila-superior">
-<section class="derecha">
-<p style="font-family: 'Cinzel', serif;"> M E N S A J E </p>
-<p>Crea tu propia historia</p>
-<p>o explora un mundo lleno de nuevas historias</p>
-<p>lleno de Investigaciones y por sobre todo</p>
-<p>hecho con mucho amor por 4to Baco.</p>
+<div class="filainfo">
+	<section class="innn">
+<p style="font-family: 'Cinzel', serif; color: black; font-family: 'Coiny';">M E N U</p>
+<p>En esta seccion se encontrara la pagina de inicio de todo este sitio web, en esta se encontrara informacion como:</p>
+<p>las secciones de la pagina y donde encontrarla, autores destacados y la introduccion a nuestra pagina web</p>
+<p> Esto se podra encontrar en la pestaña:</p>
+<p> <a href="#Menu"> Menu </a> </p>
+	</section>
+	<section class="in">
+<p style="font-family: 'Cinzel', serif; color: black; font-family: 'Coiny';">C O D I G O</p>
+<p>En esta seccion se encontrra informacion sobre la estructura de esta pagina web; tal como: </p>
+<p> Codigo, tipos de diseños planeados y informacion clave de la estructura de la pagina</p>
+<p> Esto se podra encontrar en la pestaña: </p>
+<p> <a href="#Menu"> Menu </a> </p> 
+	</section>
+<section class="inf">
+<p style="font-family: 'Cinzel', serif; color: black; font-family: 'Coiny';">P A G I N A</p>
+<p>En esta seccion se podra encontrar informacion como:</p>
+<p> Diseño del logo de la pagina, Paleta de colores y otros detalles </p>
+<p> Esto se podra encontrar en la pestaña: </p>
+<p> <a href="#Sobre nosotros"> Sobre nosotros </a> </p> 
 </section>
-<section class="izquierda">
-<img src="https://wallpapers.com/images/featured/noche-estrellada-luna-bdlgkile5f7jt8bl.jpg" width="500" height="300">
+<section class="info">
+<p style="font-family: 'Cinzel', serif; color: black; font-family: 'Coiny';">A Y U D A</p>
+<p>Este sera un boton donde podras encontrar ayuda sobre distintos problema</p>
+<p>y no solo eso si no tambien podras encontrar indicaciones sobre distintas funciones</p>
+<p> Este se podra encontrar en el boton: </p>
+<p> <a href="#Ayuda"> Ayuda </a> </p> 
 </section>
 </div>
-<div style="color: white;">
-	<div class="inferior">
-	<section class="left">
-<p style="font-family: 'Cinzel', serif;"> I N D I C E </p>
-<nav> 
-	<li> <a href="#hola" style="color: white;"> Introduccion </a></li>
-	<li> <a href="#semana1" style="color: white;"> Semana 1.</a></li>
-	<li> <a href="#semana2" style="color: white;"> Semana 2.</a></li>
-	<li> <a href="#semana3" style="color: white;"> Semana 3.</a></li>
-	<li> <a href="#semana4" style="color: white;"> Semana 4.</a></li>
-	<li> <a href="#semana5" style="color: white;"> Semana 5.</a></li>
-	<li> <a href="#semana6" style="color: white;"> Semana 6.</a></li>
-	<li> <a href="#semana7" style="color: white;"> Semana 7.</a></li>
-	<li> <a href="#semana8" style="color: white;"> Semana 8.</a></li>
-</nav>
 </section>
-	<div style="text-align: center;">
-	<section class="right">
-	<img src="https://campus.stedwards.com.ar/pluginfile.php/1462/course/overviewfiles/literatura.jpg" alt=" 4to baco " width="800px" height="200px">
+	<section id="autores" class="autores" style="padding: 70px;">
+	<h2 style="background-color: #fae6cb; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); font-family: 'Coiny'; color: black; display: inline-block;">Autores Destacados</h2>
+	<div class="tarjetas">
+	<div class="tarjeta">
+	<img src="https://s1.abcstatics.com/abc/www/multimedia/espana/2024/05/11/cervantes-cordoba-quiote.jpg" alt="Cervantes"></img>
+	<h3 style="font-family: 'Outfit'; color: black;">Miguel de Cervantes</h3>	
+	<p>Autor de "Don Quijote", considerado la primera novela moderna.</p>
+</div>
+<div class="tarjeta">
+<img src="https://www.escritas.org/autores/jorge-luis-borges.webp"
+alt="Borges">
+</img>
+	<h3 style="font-family: 'Outfit'; color: black;">Jorge Luis Borges</h3>	
+	<p>
+	Poeta, cuentista y ensayista argentino, maestro del pensamiento literario.
+	</p>	
+	</div>
+	<div class="tarjeta">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgPNUjprcQZw2RegDKY3Gwv4cCFgfKULvsDA&s" alt="Mary Shelley">
+	</img>
+<h3 style="font-family: 'Outfit'; color: black;">Mary Shelley</h3>
+<p>
+Escritora inglesa, creadora del mito de Frankenstein y pionera de la
+ciencia ficción.
+</p>
+</div>
+</div>
 </section>
-<dt> Alumna Jessica Muñoz</dt>
-<dd> Encagada de liderar el proyecto de la Tarea no.4. de la materia Comunicacion y Lenguaje, propietaria de esta pagina </dd>
-<dt> Alumno Edreas</dt>
-<dd> Encargado de la base de la pagina web</dd>
-</dl>
-<div>
-<br>-</br>
-<footer><img src="https://liceocanadiense.edu.gt/wp-content/uploads/2024/07/nuevo_logo_lc-1.png" alt=" 4to baco " width="400px" height="100px">
+</section>
+<footer style="background-color: white; color: #f0f0f0; padding: 20px;">
+<div style="background-color: white; text-align: center;">
+<img src="https://liceocanadiense.edu.gt/wp-content/uploads/2024/07/nuevo_logo_lc-1.png" alt=" 4to baco " width="220px" height="50px">
 </footer>
+</section>
+</div>
+</div>
 </body>
 </html>
 

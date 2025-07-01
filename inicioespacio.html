@@ -7,17 +7,49 @@
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap" rel="stylesheet">
 <style>
+    .imagen-fondo {
+    	padding: 0;
+    	background-image: url('https://i.pinimg.com/originals/b7/8d/fd/b78dfdb1f16736f557f9d70fca1b919e.gif'); 
+    	background-size: cover;       
+    	background-attachment: fixed; 
+    	background-position: center;  
+    	background-repeat: no-repeat; 
+    	min-height: 100vh
+        }
 	body{ 	
 	margin: 0;
 	text-align: center;
-	background: linear-gradient(to bottom, #060606, #060606, #110a2d);
+	background: linear-gradient(to bottom, #B0D7E8,white,white);
 	font-family: ¨Source Serif 4¨, serif;
+    	display: flex;
+    	flex-direction: column;
 	}
 	header{
-	background-color: black;
+	background-color: white;
 	}
+    	header .container {
+    	max-width: 1200px;
+    	margin: auto;
+    	padding: 0 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	}
+    	header nav{
+    	display: flex;
+    	}
+    	header nav p {
+    	color: black;
+    	margin-left: 20px;
+    	transition: color 0.5s ease;
+    	cursor: pointer;
+    	font-family: 'Cinzel', serif;
+    	}
+    	header nav p:hover {
+    	color: #00000065;
+    	}
 	p{
-	color: white;
+	color: black;
 	}
 	.contenedor-imagen {
 	position: relative;
@@ -34,14 +66,14 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	padding: 1em;
+	padding: 10px;
 	box-sizing: border-box;	
-	color: white;
+	color: black;
 	background: rgba(0, 0, 0, 0.5);
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	text-align: center;
+	text-align: right;
+    	align-items: flex-end;
 	}
 	.fila-superior {
 	display: flex;	
@@ -50,37 +82,34 @@
 	.fila-superior section {
 	flex: 1;
 	padding: 20px;
-	color: white;
+	color: black;
 	}
 	.izquierda {
-	color: white
+	color: black;
 	}
 	.derecha {
-	color: white
+	color: black;
 	}
 	.info{
-	background-color: black
+	background-color: #ccffcc;
 	}
 	.inf{
-	background-color: black
+	background-color: #ddf0e5;
 	}
 	.in{
-	background-color: black
+	background-color: #f8e1e7;
 	}
 	.innn{
-	background-color: black
+	background-color: #ffffd9;
 	}
 	.filainfo{
 	display: flex;
-	height: 50vh;
 	padding: 10px;
-	box-sizing: border-box;
-	border-top: 1px solid #000000;
 	}
 	.info, .inf, .in, .innn {
-	flex: 1;
+    	flex: 1;
 	padding: 10px;
-	color: white;
+	color: black;
 	}
 	.inferior {
 	display: flex;	
@@ -96,196 +125,234 @@
 	.left{		
 	height: 48.5vh;
 	}
-	.nah{
+	.intro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px 0;
 	}
-</style>
+	.infoo{
+	width: 350px;
+	padding: 10px;
+	background-color:rgba(204, 255, 242, 0.3);
+	border-radius: 10px;
+	}
+	.autores {
+	padding: 50px 20px;
+	text-align: center;
+	}
+	.tarjetas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	margin-top: 30px;
+	}
+	.tarjeta {
+	background-color: #fff9d6;
+	width: 280px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	}
+	.tarjeta:hover {
+	transform: scale(1.05);
+	}
+	.tarjeta img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 10px;
+	position: relative;
+	z-index: 1;
+	}
+	footer{
+	background-color: white;
+	}
+    	footer .container {
+    	max-width: 1200px;
+    	margin: auto;
+    	padding: 0 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	}
+	footer nav{
+    	display: flex;
+    	}
+    	footer nav p {
+    	color: black;
+    	margin-left: 20px;
+    	transition: color 0.5s ease;
+    	cursor: pointer;
+    	font-family: 'Cinzel', serif;
+    	}
+	p, h2, h3{
+  	color: rgba(0, 0, 0, 0.5);
+	}
+</style>	
 </head>
 <body>
-<header style="font-family: 'Cinzel', serif; background-color: #060606;">  <a href="https://liceocanadiense.mayavirtual.net/my/"><img src="https://liceocanadiense.mayavirtual.net/pluginfile.php/1/theme_space/favicon/1747946624/nuevo_ico_lc.ico" alt=" 4to baco " width="70px" height="50px"></img></a></header>
-<div style="background-color: #060606; border-radius: 8px; padding: 10px;">
-  <section>
-    <p onclick="mostrarMensaje('menu')" style="cursor:pointer; font-family: 'Cinzel', serif; color: #ffefcc;">
+<div class="imagen-fondo">
+<header style="font-family: 'Cinzel', serif; background-color: white;">
+<div class="container">    
+<a href="https://liceocanadiense.mayavirtual.net/my/"><img src="https://liceocanadiense.mayavirtual.net/pluginfile.php/1/theme_space/favicon/1747946624/nuevo_ico_lc.ico" alt=" 4to baco " width="70px" height="50px"></img></a>
+<div style="border-radius: 8px; padding: 10px; ">
+  <nav>
+    <p onclick="mostrarMensaje(event, 'menu')" style="cursor:pointer;">
       -------- M E N U --------  
     </p>                
-    <p onclick="mostrarMensaje('populares')" style="cursor:pointer; font-family: 'Cinzel', serif; color: #ffefcc;">
+    <p onclick="mostrarMensaje(event, 'populares')" style="cursor:pointer;">
       -----  P O P U L A R E S ------   
     </p>
-    <p onclick="mostrarMensaje('nosotros')" style="cursor:pointer; font-family: 'Cinzel', serif; color: #ffefcc;">
+    <p onclick="mostrarMensaje(event, 'nosotros')" style="cursor:pointer;">
       --- S O B R E  -- N O S O T R O S ---
     </p>
-  </section>
+  </nav>
+  </div>
 </div>
-<div id="menu" style="border-radius: 8px; background-color:#060606; display: none; padding: 10px;">
-<a href="https://kahutsuki19.github.io/ProyectoComunicacion/iniciooscuro" style="font-family: 'Cinzel', serif; color: #ffefcc; text-decoration:underline; display:block;">
-	--- M E N U ---
-</a>
-</div>
-<div id="populares" style="border-radius: 8px; background-color:#060606; display: none; padding: 10px;">
-<a href="https://kahutsuki19.github.io/ProyectoComunicacion/trabajos" style="font-family: 'Cinzel', serif; color: #ffefcc; text-decoration:underline; display:block;">
-	--- T R A B A J O S---
-</a>
-<a href="https://kahutsuki19.github.io/ProyectoComunicacion/autores" style="font-family: 'Cinzel', serif; color: #ffefcc; text-decoration:underline; display:block;">
-	--- A U T O R E S---
-</a>
-<a href="https://kahutsuki19.github.io/ProyectoComunicacion/literatura" style="font-family: 'Cinzel', serif; color: #ffefcc; text-decoration:underline; display:block;">
-	--- L I T E R A T U R A ---
+</header>
+<div id="menuFlotante" style="display: none; position: absolute; z-index: 999; background-color: rgba(255, 239, 204, 0.3); border-radius: 8px; padding: 15px; font-family: 'Cinzel', serif; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+    <div id="menu">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/iniciooscuro" style="font-family: 'Cinzel', serif; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+M E N U
 </a>
 </div>
-<div id="nosotros" style="border-radius: 8px; background-color:#060606; display: none; padding: 10px;">
-<a href="https://kahutsuki19.github.io/ProyectoComunicacion/nosotros" style="font-family: 'Cinzel', serif; color: #ffefcc; text-decoration:underline; display:block;">
-	--- N O S O T R O S ---
+<div id="populares" style="border-radius: 8px; display: none; padding: 10px; background-color: transparent;">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/trabajos" style="font-family: 'Cinzel', serif; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+T R A B A J O S
 </a>
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/autores" style="font-family: 'Cinzel', serif; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+A U T O R E S
+</a>
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/literatura" style="font-family: 'Cinzel', serif; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+L I T E R A T U R A
+</a>
+</div>
+<div id="nosotros" style="border-radius: 8px; display: none; padding: 10px; background-color: rgba(255, 239, 204, 0.3);">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/nosotros" style="font-family: 'Cinzel', serif; text-decoration:underline; display:block;">
+N O S O T R O S 
+</a>
+</div>
 </div>
 <script>
-function mostrarMensaje(seccion) {
-	document.getElementById("menu").style.display = "none";
-	document.getElementById("populares").style.display = "none";
-	document.getElementById("nosotros").style.display = "none";
-	document.getElementById(seccion).style.display = "block";
-}
+    function mostrarMensaje(event, seccion) {
+      const flotante = document.getElementById("menuFlotante");
+
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("populares").style.display = "none";
+      document.getElementById("nosotros").style.display = "none";
+
+      document.getElementById(seccion).style.display = "block";
+
+      const rect = event.target.getBoundingClientRect();
+      flotante.style.top = (rect.bottom + window.scrollY + 5) + "px";
+      flotante.style.left = (rect.left + window.scrollX) + "px";
+
+      flotante.style.display = "block";
+    }
 </script>
-<div class="contenedor-imagen">
-<img src="
-https://miro.medium.com/v2/resize:fit:2000/1*5OgdjKrMNjiy3nynyySN6Q.gif
-" alt="Galaxiaaa" class="mi-imagen" >
-<div class="texto-encima">
-<section>
-<h1 style="font-family: 'Cinzel', serif; color: #fec542;"> E X P L O R A</h1>
-<h2 style="font-family: 'Cinzel', serif; color: #fec542;"> un mundo lleno de magia</h2>
-</section>
-</div>
-</div>
-	<p style="font-family: 'Cinzel', serif; color: #fec542;"> Crea tu propio universo </p>
-	<h2 id="hola"><div style="font-family: 'Cinzel', serif; color: #fec542;"> Introduccion </div></h2>
+<div class="intro">
+    <section class="infoo">
+    <p style="font-family: 'Cinzel', serif;"> Crea tu propio mundo </p>
+	<h2 id="hola"><div style="font-family: 'Cinzel', serif; color: black;"> I N T R O D U C C I O N </div></h2>
 	<p> Bienvenid@ a la pagina de 4to Bachillerato en computacion </p> 
 	<p> Esta pagina no solo reflejara las lecturas y contenidos de este tercer Bimestre en el area de Comunicacion y Lenguaje;</p> 
 	<p>si no que tambien reflejara lo aprendido sobre; autores, tareas, ejercicios en clase, y demas investigaciones</p>
 	<p> Computacion no es solo una area tecnica en computadoras, si no tambien donde tenemos que aprender:</p>
 	<p> analisis, comprension lectora, logica, secuencias de tiempo y demas</p>
-<br>.</br>
-<br>.</br>
-<div class="filainfo">
-<section class="info">
-<img src="https://m.media-amazon.com/images/I/71tNv3Bg0ML._AC_UF1000,1000_QL80_.jpg" height="300" weight="100">
-</section>
-<section class="inf">
-<img src="https://images2.medimops.eu/product/fa6b3d/M02869302193-large.jpg" height="300" weight="100">
-</section>
-<section class="in">
-<img src="https://sevenstories-prod.s3.amazonaws.com/images/000002/988/9781644211526-f_medium-b085b8c3f57f6751317ddeef4ec5ea09.jpeg" height="300" weight="100">
-<section>
+    </section>
 </div>
-<br>-</br>
-<br>-</br>
 <div class="filainfo">
 	<section class="info">
-<p style="font-family: 'Cinzel', serif; color: #fec542;">A U T O R E S</p>
+<p style="font-family: 'Cinzel', serif; color: black;">A U T O R E S</p>
 <p> En esta seccion se mencionaran diversos autores donde se habran investigado diversos datos de ellos como:</p>
 <p> Nacimiento, Muerte, Literatura a la que se dedico, Principales obras, Caracteristicas de el autor, entre otros</p>
-<p> Esto es podra encontrar en la pestaña: Populares y menu</p>
+<p> Esto es podra encontrar en la pestaña: Populares</p>
 	</section>
 	<section class="inf">
-<p style="font-family: 'Cinzel', serif; color: #fec542;">L I T E R A T U R A S</p>
+<p style="font-family: 'Cinzel', serif; color: black;">L I T E R A T U R A S</p>
 <p> En esta seccion se haran investigaciones sobre las diversas Literaturas Existentes, mencionando datos como:</p>
 <p> Principales autores, datos importantes, fecha en la que fue su mejor epoca, etc</p>
-<p> Esto es podra encontrar en la pestaña: Populares y menu</p>
+<p> Esto es podra encontrar en la pestaña: Populares</p>
 	</section>
 	<section class="in">
-<p style="font-family: 'Cinzel', serif; color: #fec542;">T R A B A J O S</p>
+<p style="font-family: 'Cinzel', serif; color: black;">T R A B A J O S</p>
 <p> En esta seccion se subiran trabajos pedidos por la profesora, tales como: </p>
 <p> Tareas en clase, Historias hechas, Mejores trabajos calificados, entre otros</p>
-<p> Esto es podra encontrar en la pestaña: Populares y menu.</p>
-
+<p> Esto es podra encontrar en la pestaña: Populares</p>
 	</section>
 	<section class="innn">
-<p style="font-family: 'Cinzel', serif; color: #fec542;">N O S O T R O S</p>
+<p style="font-family: 'Cinzel', serif; color: black;">N O S O T R O S</p>
 <p> En esta seccion se encontraran datos sobre los integrantes de nuestra clase, tales como:</p>
 <p> Nombre de los estudiantes, correo electronico estudiantil, trabajos subidos, aportaciones, entre otros</p>
 <p> Esto es podra encontrar en la pestaña: Sobre nosotros </p>
 	</section>
-</div>
-<div class="fila-superior">
-<section class="derecha">
-<p style="font-family: 'Cinzel', serif; color: #fec542;"> D R A M A </p>
-<p style="color: #fec542;">Crea tu propia historia</p>
-<p>El drama es un género literario que se caracteriza por la representación de conflictos humanos a través del diálogo entre los personajes, generalmente en forma de una obra teatral. A diferencia de la tragedia o comedia, el drama no se inclina hacia una visión completamente trágica o cómica, sino que mezcla elementos de ambas, siendo más realista y menos exagerado.</p>
+    </div>
+<div class="filainfo">
+	<section class="innn">
+<p style="font-family: 'Cinzel', serif; color: black;">M E N U</p>
+<p>En esta seccion se encontrara la pagina de inicio de todo este sitio web, en esta se encontrara informacion como:</p>
+<p>las secciones de la pagina y donde encontrarla, autores destacados y la introduccion a nuestra pagina web</p>
+<p> Esto se podra encontrar en la pestaña: Menu </p>
+	</section>
+	<section class="in">
+<p style="font-family: 'Cinzel', serif; color: black;">C O D I G O</p>
+<p>En esta seccion se encontrra informacion sobre la estructura de esta pagina web; tal como: </p>
+<p> Codigo, tipos de diseños planeados y informacion clave de la estructura de la pagina</p>
+<p> Esto se podra encontrar en la pestaña: Menu </p>
+	</section>
+<section class="inf">
+<p style="font-family: 'Cinzel', serif; color: black;">P A G I N A</p>
+<p>En esta seccion se podra encontrar informacion como:</p>
+<p> Diseño del logo de la pagina, Paleta de colores y otros detalles </p>
+<p> Esto se podra encontrar en la pestaña: Sobre nosotros</p>
 </section>
-<section class="izquierda">
-<img src="https://pngimg.com/d/carnival_mask_PNG97.png" width="300" height="300">
-</section>
-</div>
-<div class="fila-superior">
-<section class="derecha">
-<p style="font-family: 'Cinzel', serif; color: #fec542;"> C O M E D I A </p>
-<p style="color: #fec542;">Elige a tus protagonistas</p>
-<p>La comedia es un género literario que busca provocar la risa a través de situaciones divertidas, personajes cómicos y finales felices. El propósito de la comedia es entretener y criticar suavemente aspectos de la sociedad, generalmente de forma irónica o sarcástica.</p>
-</section>
-<section class="izquierda">
-<img src="https://t3.ftcdn.net/jpg/07/74/12/40/360_F_774124023_r9sSotAgBBqtG6QHUaXtqEHRuLrF6u8b.png" width="300" height="300">
-</section>
-</div>
-<div class="fila-superior">
-<section class="derecha">
-<p style="font-family: 'Cinzel', serif; color: #fec542;"> T R A G E D I A </p>
-<p style="color: #fec542;">Elige los finales que quieras</p>
-<p>La tragedia es un género literario que presenta historias donde los personajes enfrentan grandes sufrimientos, generalmente debido a su propio destino, errores o faltas. En la tragedia, el tono es serio y sombrío, y los finales suelen ser trágicos o desoladores.</p>
-</section>
-<section class="izquierda">
-<img src="https://www.freeiconspng.com/uploads/gun-png-3.png" width="300" height="300">
+<section class="info">
+<p style="font-family: 'Cinzel', serif; color: black;">A Y U D A</p>
+<p>Este sera un boton donde podras encontrar ayuda sobre distintos problema</p>
+<p>y no solo eso si no tambien podras encontrar indicaciones sobre distintas funciones</p>
+<p> Este se podra encontrar en el boton: Ayuda </p>
 </section>
 </div>
-<div class="fila-superior">
-<section class="derecha">
-<p style="font-family: 'Cinzel', serif; color: #fec542;"> T R A G I C O M E D I A </p>
-<p style="color: #fec542;">Cambia lo que te elijas</p>
-<p>La tragicomedia es un género que combina elementos tanto de la tragedia como de la comedia. A lo largo de la obra, se alternan momentos de gran tensión o sufrimiento con otros de ligereza y humor. Este género es un reflejo de la complejidad de la vida humana, que no siempre es ni completamente trágica ni completamente cómica.</p>
+    <section id="autores" class="autores" style="padding: 70px;">
+    <h2 style="font-family: 'Cinzel', serif; color: black; display: inline-block;">Autores Destacados</h2>
+    <div class="tarjetas">
+    <div class="tarjeta">
+    <img src="https://s1.abcstatics.com/abc/www/multimedia/espana/2024/05/11/cervantes-cordoba-quiote.jpg" alt="Cervantes"></img>
+    <h3 style="font-family: 'Cinzel', serif; color: black;">Miguel de Cervantes</h3>
+        <p>Autor de "Don Quijote", considerado la primera novela moderna.</p>
+    </div>
+    <div class="tarjeta">
+    <img src="https://www.escritas.org/autores/jorge-luis-borges.webp"
+        alt="Borges">
+    </img>
+        <h3 style="font-family: 'Cinzel', serif; color: black;">Jorge Luis Borges</h3>
+        <p>
+    Poeta, cuentista y ensayista argentino, maestro del pensamiento
+    literario.
+        </p>
+    </div>
+    <div class="tarjeta">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgPNUjprcQZw2RegDKY3Gwv4cCFgfKULvsDA&s"
+        alt="Mary Shelley">
+    </img>
+        <h3 style="font-family: 'Cinzel', serif; color: black;">Mary Shelley</h3>
+        <p>
+    Escritora inglesa, creadora del mito de Frankenstein y pionera de la
+    ciencia ficción.
+        </p>
+    </div>
+    </div>
+    </section>
 </section>
-<section class="izquierda">
-<img src="https://png.pngtree.com/png-vector/20250320/ourmid/pngtree-theater-comedy-and-tragedy-masks-on-transparent-background-png-image_15748346.png" width="300" height="300">
-</section>
-</div>
-<div class="fila-superior">
-<section class="derecha">
-<p style="font-family: 'Cinzel', serif; color: #fec542;"> F A R S A </p>
-<p style="color: #fec542;">Y con las situaciones mas absurdas que te puedas imaginar</p>
-<p>La farsa es un subgénero de la comedia que se caracteriza por situaciones absurdas, exageradas y a menudo inverosímiles. Las farsas se centran en el humor físico, las confusiones y las situaciones ridículas, con un enfoque en la diversión por encima de la profundidad o la reflexión.</p>
-</section>
-<section class="izquierda">
-<img src="https://png.pngtree.com/png-vector/20231014/ourmid/pngtree-fake-stamp-in-red-color-with-line-vector-png-image_10241779.png" width="300" height="300">
-</section>
-</div>
-<div style="color: white;">
-	<div class="inferior">
-	<section class="left">
-<p style="font-family: 'Cinzel', serif; color: #fec542;"> I N D I C E </p>
-<nav> 
-	<li> <a href="#hola" style="color: white;"> Introduccion </a></li>
-	<li> <a href="#semana1" style="color: white;"> Semana 1.</a></li>
-	<li> <a href="#semana2" style="color: white;"> Semana 2.</a></li>
-	<li> <a href="#semana3" style="color: white;"> Semana 3.</a></li>
-	<li> <a href="#semana4" style="color: white;"> Semana 4.</a></li>
-	<li> <a href="#semana5" style="color: white;"> Semana 5.</a></li>
-	<li> <a href="#semana6" style="color: white;"> Semana 6.</a></li>
-	<li> <a href="#semana7" style="color: white;"> Semana 7.</a></li>
-	<li> <a href="#semana8" style="color: white;"> Semana 8.</a></li>
-</nav>
-</section>
-	<div style="text-align: center;">
-<section class="nah">
-	<img src="https://i0.wp.com/acalanda.com/wp-content/uploads/2019/05/destacada-novela-negra1.jpg?fit=851%2C315&ssl=1" alt=" 4to baco " width="800px" height="200px">
-</section>
-</div>
-</div>
-<div style="text-align: center">
-<dt> Alumna Jessica Muñoz</dt>
-<dd> Encagada de liderar el proyecto de la Tarea no.4. de la materia Comunicacion y Lenguaje, propietaria de esta pagina </dd>
-<dt> Alumno Edreas</dt>
-<dd> Encargado de la base de la pagina web</dd>
-</dl>
-</div>
-<br>-</br>
-<footer><img src="https://liceocanadiense.edu.gt/wp-content/uploads/2024/07/nuevo_logo_lc-1.png" alt=" 4to baco " width="450px" height="100px">
+<section>
+<footer style="background-color: white; color: #f0f0f0; padding: 20px;">
+<div style="background-color: white; text-align: center;">
+<img src="https://liceocanadiense.edu.gt/wp-content/uploads/2024/07/nuevo_logo_lc-1.png" alt=" 4to baco " width="220px" height="50px">
 </footer>
+</section>
+</div>
 </body>
 </html>
-

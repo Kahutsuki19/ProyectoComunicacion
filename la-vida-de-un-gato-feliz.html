@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title> Tarea no.4. Comunicacion y Lenguaje</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&family=Peralta&display=swap" rel="stylesheet">
+<style>
+    	.fondo {
+    	padding: 0;
+    	background-image: url('');   
+	background-size: cover;
+    	background-attachment: scroll; 
+    	background-position: center center;  
+    	background-repeat: no-repeat; 
+    	min-height: 100vh
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	z-index: 9999;
+	position: fixed;
+	top: 0;
+	left: 0;
+        }
+    	.imagen-fondo {
+    	padding: 0;
+    	background-image: url('https://champz.world/static/media/main-hero-foreground.1a6997058947cb474046.png');   
+	background-size: cover;
+    	background-attachment: scroll; 
+    	background-position: fixed;  
+    	background-repeat: no-repeat; 
+    	min-height: 100vh
+	width: 1800px;
+	height: 500px;
+	margin: 0;
+	z-index: 1;
+        margin: -250px auto 0px;
+	display: block;
+        }
+	body{ 	
+	overflow-x: hidden;
+	margin: 0;
+	text-align: center;
+	background: linear-gradient(to bottom right, rgb(120, 110, 58), rgb(130, 120, 58), rgb(130, 120, 58), rgb(130, 120, 58), #968c3a, #968c3a, #907e3d, #907e3d, #907e3d, #907e3d, rgb(120, 110, 61));
+	font-family: ¨Source Serif 4¨, serif;
+    	flex-direction: column;
+	}
+	header{
+	color: noc;
+	}
+	.encima{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	padding: 20px;
+	}
+    	header .container {
+    	max-width: 1200px;
+    	margin: auto;
+    	padding: 0 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	}
+    	header nav{
+    	display: flex;
+    	}
+    	header nav h1{
+    	margin-left: 20px;
+    	transition: color 0.75s ease;
+    	cursor: pointer;
+    	}
+    	header nav h1:hover{
+    	color: white;
+    	}
+	.zona-imagen{
+	background-color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	}
+	.contenedor-imagen{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-bottom: 375px;
+	}
+	.mi-imagen {
+	display: block;
+	width: 1500px;
+	height: auto;
+	cursor: pointer;
+	background: radial-gradient(circle at center, white, blue);
+	}
+	.texto-encima {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	box-sizing: border-box;	
+	color: black;
+	display: flex;
+	justify-content: right;
+	text-align: center;
+    	align-items: flex-start;
+	z-index: 2;
+	}
+	.fila-superior {
+	display: flex;	
+	height: 52.5vh;
+	max-width: 1800px;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	}
+	.fila-superior section {
+	flex: 1;
+	padding: 20px;
+	box-sizing: border-box;
+	gap: 10px;
+	padding: 10px;
+	margin-top: 0px;
+	background-size: cover;
+	border-radius: 10px;
+	box-shadow:
+	-1px -1px 0 black,
+	1px -1px 0 black,
+	-1px  1px 0 black,
+	1px  1px 0 black;
+	}
+	.izquierda {
+	position: relative;
+	margin-top: 100px;
+	}
+	.derecha {
+	position: relative;
+	margin-top: 100px;
+	}
+	.filainfo{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10px;
+	padding: 10px;
+	margin-top: 0px;
+	background-size: cover;
+	border-radius: 10px;
+	box-sizing: border-box;
+	box-shadow:
+	-1px -1px 0 black,
+	1px -1px 0 black,
+	-1px  1px 0 black,
+	1px  1px 0 black;
+	}
+	.filainf{
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10px;
+	padding: 10px;
+	margin-top: 0px;
+	background-size: cover;
+	border-radius: 10px;
+	box-sizing: border-box;
+	box-shadow:
+	-1px -1px 0 black,
+	1px -1px 0 black,
+	-1px  1px 0 black,
+	1px  1px 0 black;
+	}
+	.info{
+	background-position: center center;
+	background-size: cover;
+	background-color: #A88332;
+	}
+	.inf{	
+	background-position: center center;
+	background-size: contain;
+	background-color: #8C7631;
+	}
+	.in{
+	background-position: center center;
+	background-size: cover;
+	background-color: #A86F3C;
+	}
+	.innn{
+	background-position: center center;
+	background-size: auto;
+	background-color: #4A675A;
+	}
+	.info, .inf, .in, .innn {
+    	flex: 1;
+	padding: 10px;
+	color: black;
+	box-sizing: border-box;
+	height: 400px;
+	justify-content: center; 
+	align-items: center;
+	text-align: center;
+	background-repeat: no-repeat
+	background-image: url('https://cdn.pixabay.com/photo/2012/04/14/16/57/scrolls-34607_1280.png');
+	background-size: cover;
+	border-radius: 10px;
+	box-shadow:
+	-1px -1px 0 black,
+	1px -1px 0 black,
+	-1px  1px 0 black,
+	1px  1px 0 black;
+	}
+	.filainfo-encima {
+	position: absolute;
+	top: 95%;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 10px;
+	box-sizing: border-box;
+	z-index: 5;
+	}	
+	.inferior {
+	display: flex;	
+	height: 50vh;
+	}
+	.inferior section{
+	flex: 1;
+	padding: 20px;
+	}
+	.right{
+	height: 48.5vh;		
+	}
+	.left{		
+	height: 48.5vh;
+	}
+	.intro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px;
+	margin-left: -700px;
+	margin-top: 200px;
+	padding: 20px;
+	}
+	.infoo{
+	text-align: center;
+	width: 500px;
+	height: 350px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgb(192, 220, 212);
+	}
+	.autores {
+	padding: 50px 20px;
+	text-align: center;
+	}
+	.autores h2{
+	color: #333;
+	margin-bottom: 40px;
+	}
+	.tarjetas {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+	margin-top: 30px;
+	}
+	.tarjeta {
+	background-color: #a4070a;
+	color: white;
+	width: 280px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	box-shadow:
+	-1px -1px 0 black,
+	1px -1px 0 black,
+	-1px  1px 0 black,
+	1px  1px 0 black;
+	}
+	.tarjeta:hover {
+	transform: scale(1.05);
+	}
+	.tarjeta img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	border-radius: 10px;
+	display: block;
+	}
+	.tarjeta .imagen-contenedor {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+	}
+	.tarjeta .imagen-contenedor::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); 
+	background-image: url('https://img1.picmix.com/output/stamp/normal/1/0/6/0/960601_d1e52.png');
+	background-size: cover;
+	background-position: center; 
+	transition: opacity 0.3s ease;
+	z-index: 2;
+	}
+	.tarjeta:hover .imagen-contenedor::before {
+	opacity: 0;
+	}
+	.tarjeta h3 {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	color: white;
+	}
+	.tarjeta p {
+	font-size: 0.9em;
+	color: #f0f0f0;
+	}
+	footer{
+	background-color: white;
+	}
+    	footer .container {
+    	max-width: 1200px;
+    	margin: auto;
+    	padding: 0 20px;
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+    	}
+	footer nav{
+    	display: flex;
+    	}
+    	footer nav p {
+    	color: black;
+    	margin-left: 20px;
+    	transition: color 0.5s ease;
+    	cursor: pointer;
+    	font-family: 'Coiny';
+    	}
+	p{
+	font-family: 'Life Savers', cursive;
+	font-size: 18px;
+	color: white;
+	}
+	h2, h3, h4, h5, h6{
+	font-family: 'Peralta';
+	text-shadow:
+	-1px -1px 0 black,
+	1px -1px 0 black,
+	-1px  1px 0 black,
+	1px  1px 0 black;
+	color: white;
+	font-size: 20px;
+	}
+	h1{
+	font-family: 'Life Savers', cursive;
+	font-size: 18px;
+	color: black;
+	}
+	.elcorte{
+  	position: absolute;
+  	bottom: -50px;
+  	left: 0;
+  	width: 1875px;
+  	height: 100px;
+  	z-index: 1;
+  	pointer-events: none;
+	left: -100%;
+	transform: scaleY(-1);
+	}
+	.seccion-corte {
+	position: relative;
+	display: inline-block;
+	}
+	.ayuda{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: -700px;
+	margin-top: -200px;
+	gap: 10px;
+	}
+	button{
+	background-color: #faffc7;
+	height: 50px;
+	width: 120px;
+	font-family: 'Coiny';
+	font-size: 20px;
+	top: 60%;
+	color: black;
+	margin-left: -500px;
+	}
+	.banner{
+	position: relative;
+	margin-top: -130px;
+	z-index: -1;
+	height: 150px;
+	width: 250px;
+	}
+  .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      .galeria {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .galeria img {
+        max-width: 90%;
+      }
+	}
+</style>	
+</head>
+<body>
+<header class="encima" style="background-color: transparent;">
+<div class="container">  
+<a href="https://liceocanadiense.mayavirtual.net/my/"><img src="https://liceocanadiense.mayavirtual.net/pluginfile.php/1/theme_space/favicon/1747946624/nuevo_ico_lc.ico" alt=" 4to baco " width="70px" height="50px"></img></a>
+<div style="border-radius: 8px; padding: 10px; ">
+<nav>
+	<h1 id="Menu" onclick="mostrarMensaje(event, 'menu')" style="cursor:pointer;">
+	-------- M E N U --------  
+	</h1>                
+	<h1 id="Populares" onclick="mostrarMensaje(event, 'populares')" style="cursor:pointer;">
+	-----  P O P U L A R E S ------   
+	</h1>
+	<h1 id="Sobre nosotros" onclick="mostrarMensaje(event, 'nosotros')" style="cursor:pointer;">
+	--- S O B R E  -- N O S O T R O S ---
+	</h1> 
+</nav>
+</div>
+</div>
+<div id="menuFlotante" style="display: none; position: absolute; z-index: 999; background-color: rgba(255, 239, 204, 0.3); border-radius: 8px; padding: 15px; font-family: 'Cinzel', serif; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+    <div id="menu">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/inicio" style="font-family: 'Life Savers', cursive; color: #424136; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+M E N U
+</a>
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/codigo" style="font-family: 'Life Savers', cursive; color: #424136; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+C O D I G O
+</a>
+</div>
+<div id="populares" style="border-radius: 8px; display: none; padding: 10px; background-color: transparent;">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/trabajos" style="font-family: 'Life Savers', cursive; color: #424136; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+T R A B A J O S
+</a>
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/autores" style="font-family: 'Life Savers', cursive; color: #424136; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+A U T O R E S
+</a>
+<a href="https://kahutsuki19.git hub.io/ProyectoComunicacion/literatura" style="font-family: 'Life Savers', cursive; color: #424136; background-color: rgba(255, 239, 204, 0.3); text-decoration:underline; display:block;">
+L I T E R A T U R A
+</a>
+</div>
+<div id="nosotros" style="border-radius: 8px; display: none; padding: 10px; background-color: rgba(255, 239, 204, 0.3);">
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/nosotros" style="font-family: 'Life Savers', cursive; color: #424136; text-decoration:underline; display:block;">
+N O S O T R O S 
+</a>
+<a href="https://kahutsuki19.github.io/ProyectoComunicacion/pagina" style="font-family: 'Life Savers', cursive; color: #424136; text-decoration:underline; display:block;">
+P A G I N A
+</a>
+</div>
+</div>
+</header>
+<script>
+    function mostrarMensaje(event, seccion) {
+      const flotante = document.getElementById("menuFlotante");
+
+      document.getElementById("menu").style.display = "none";
+      document.getElementById("populares").style.display = "none";
+      document.getElementById("nosotros").style.display = "none";
+
+      document.getElementById(seccion).style.display = "block";
+
+      const rect = event.target.getBoundingClientRect();
+      flotante.style.top = (rect.bottom + window.scrollY + 5) + "px";
+      flotante.style.left = (rect.left + window.scrollX) + "px";
+
+      flotante.style.display = "block";
+    }
+</script>
+
+<section class="galeria">
+<img src="https://i.imgur.com/C3tBuwq.jpeg">
+<img src="https://i.imgur.com/ZWwdbFy.jpeg">
+<img src="https://i.imgur.com/29RZ70J.jpeg">
+<img src="https://i.imgur.com/SkZsETI.jpeg">
+</section>
+
+<footer style="background-color: white; color: #f0f0f0; padding: 20px;">
+<div style="background-color: white; text-align: center;">
+<img src="https://liceocanadiense.edu.gt/wp-content/uploads/2024/07/nuevo_logo_lc-1.png" alt=" 4to baco " width="220px" height="50px">
+</footer>
+</section>
+</div>
+</div>
+</body>
+</html>
